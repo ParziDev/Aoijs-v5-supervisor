@@ -56,8 +56,11 @@ bot.variables({
   yasaklılog:"",//Yasaklı tag log ID
   booster:"",//Booster rol ID
   vip:"",//Vip rol ID
-  tick:"<:tick:949391865550094356>",//Onay emoji ID örn: ✅
-  cross:"<:cross:949392605618253845>"//Red emoji ID örn: ❎
+  çekiliş:"",//Çekiliş katılımcısı rol ID
+  etkinlik:"",//Etkinlik katılımcısı rol ID
+  id:"",//Elleme
+  tick:"",//Onay emoji ID örn: ✅
+  cross:""//Red emoji ID örn: ❎
 })
 
 ////////// COMMANDS \\\\\\\\\\
