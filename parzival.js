@@ -59,11 +59,16 @@ bot.variables({
   çekiliş:"",//Çekiliş katılımcısı rol ID
   etkinlik:"",//Etkinlik katılımcısı rol ID
   id:"",//Elleme
+  snipe1:"",//Elleme
+  snipe2:""//Elleme
+  snipe3:"",//Elleme
   tick:"",//Onay emoji ID örn: ✅
   cross:""//Red emoji ID örn: ❎
 })
 
 ////////// COMMANDS \\\\\\\\\\
+
+//Hoşgeldin
 bot.joinCommand({
   channel:"$getServerVar[register]",
   $if:"v4",
@@ -97,5 +102,16 @@ bot.awaitedCommand({
   code:`
   $getServerVar[tick] \`$userTag\` adlı üye jail'de olduğu için cezalandırıldı.
   $giveRole[$guildID;$author;$getServerVar[jailrol]]
+  `
+  })
+
+//Snipe
+bot.deletedCommand({
+  channel:"$channelID",
+  code:`
+  $setServerVar[snipe3;$message]
+  $setServerVar[snipe2;$channelUsed]
+  $setServerVar[snipe1;$authorID]
+  $onlyIf[$isBot[$authorID]==false;]
   `
   })
