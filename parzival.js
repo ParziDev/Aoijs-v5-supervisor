@@ -49,6 +49,7 @@ bot.variables({
   jailrol:"",//Jail rolü ID
   jail:"no",//Elleme
   tag:"",//Tag
+  etikettag:"",//Etiket tagı örn: #1851
   tagrol:"",//Tag rolü ID
   taglog:"",//Tag log ID
   yasaklıtag:"",//Yasaklı taglar örnek: tag1;tag2;tag3
