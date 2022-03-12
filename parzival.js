@@ -30,7 +30,7 @@ bot.variables({
   cross:"",//Red emoji ID örn: ❎
   afk:"no",//Elleme
   afksayı:"0",//Elleme
-  afksebep:""//Elleme
+  afksebep:"",//Elleme
   booster:"",//Booster rol ID
   vip:""//Vip rol ID
 })
@@ -63,7 +63,7 @@ bot.variables({
   jailrol:"",//Jail rolü ID
   jail:"no",//Elleme
   snipe1:"",//Elleme
-  snipe2:""//Elleme
+  snipe2:"",//Elleme
   snipe3:""//Elleme
 })
 
