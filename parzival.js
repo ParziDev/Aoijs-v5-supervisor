@@ -81,7 +81,19 @@ bot.variables({
 bot.variables({
   çekiliş:"",//Çekiliş katılımcısı rol ID
   etkinlik:"",//Etkinlik katılımcısı rol ID
-  id:"",//Elleme
+  ikizler:"",//Burç rolü ID
+  terazi:"",//Burç rolü ID
+  yay:"",//Burç rolü ID
+  balık:"",//Burç rolü ID
+  kova:"",//Burç rolü ID
+  oğlak:"",//Burç rolü ID
+  boğa:"",//Burç rolü ID
+  akrep:"",//Burç rolü ID
+  yengeç:"",//Burç rolü ID
+  koç:"",//Burç rolü ID
+  aslan:"",//Burç rolü ID
+  başak:"",//Burç rolü ID
+  id:""//Elleme
 })
 
 //////////////////// COMMANDS \\\\\\\\\\\\\\\\\\\\
