@@ -1,11 +1,10 @@
 module.exports = [{
-  name:"button1",
+  name:"rol1",
   code:`
   $addButton[1;Etkinlik Katılımcısı;1;etkinlik1;no;🥳]
   $addButton[1;Çekiliş Katılımcısı;1;çekiliş1;no;🎉]
-<@&$getServerVar[çekiliş]> Rolü almak için aşağıdaki butona bas.
-<@&$getServerVar[etkinlik]> Rolü almak için aşağıdaki butona bas.
-$onlyPerms[admin;]`
+  Aşağıdaki butonlardan rollerini seçebilirsin.
+  $onlyPerms[admin;]`
   },{
 type: 'interaction',
 prototype: 'button',
@@ -19,7 +18,7 @@ $onlyIf[$interactionData[customId]==çekiliş1;]
   type:"awaited",
   prototype:"button",
   code:`
-  $interactionReply[Rolün alındı.;;;;;yes]
+  $interactionReply[<@&$getServerVar[çekiliş]> Rolün alındı.;;;;;yes]
   $takeRole[$guildID;$getServerVar[id];$getServerVar[çekiliş]]
   `
   },{
@@ -27,7 +26,7 @@ $onlyIf[$interactionData[customId]==çekiliş1;]
   type:"awaited",
   prototype:"button",
   code:`
-  $interactionReply[Rolün verildi.;;;;;yes]
+  $interactionReply[<@&$getServerVar[çekiliş]> Rolün verildi.;;;;;yes]
   $giveRole[$guildID;$getServerVar[id];$getServerVar[çekiliş]]
   `
   },{
@@ -43,7 +42,7 @@ $onlyIf[$interactionData[customId]==etkinlik1;]
   type:"awaited",
   prototype:"button",
   code:`
-  $interactionReply[Rolün alındı.;;;;;yes]
+  $interactionReply[<@&$getServerVar[etkinlik]> Rolün alındı.;;;;;yes]
   $takeRole[$guildID;$getServerVar[id];$getServerVar[etkinlik]]
   `
   },{
@@ -51,7 +50,7 @@ $onlyIf[$interactionData[customId]==etkinlik1;]
   type:"awaited",
   prototype:"button",
   code:`
-  $interactionReply[Rolün verildi.;;;;;yes]
+  $interactionReply[<@&$getServerVar[etkinlik]> Rolün verildi.;;;;;yes]
   $giveRole[$guildID;$getServerVar[id];$getServerVar[etkinlik]]
   `
   }]
