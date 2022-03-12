@@ -7,13 +7,13 @@ intents: "all"
 const loader = new aoijs.LoadCommands(bot)
 loader.load(bot.cmd,"./komutlar/") 
 
-////////// CALLBACKS \\\\\\\\\\
+//////////////////// CALLBACKS \\\\\\\\\\\\\\\\\\\\
 bot.onJoin()
 bot.onLeave()
 bot.onMessage()
 bot.onInteractionCreate()
 
-////////// STATUS \\\\\\\\\\
+//////////////////// STATUS \\\\\\\\\\\\\\\\\\\\
 bot.status({
   text:"ParzivâL",
   type:"PLAYING",
@@ -21,12 +21,22 @@ bot.status({
   time: 12
 })
 
-////////// VARİABLES \\\\\\\\\\
+//////////////////// VARİABLES \\\\\\\\\\\\\\\\\\\\
+
+//Genel
 bot.variables({
-  prefix:".",
+  prefix:".",//Prefix
+  tick:"",//Onay emoji ID örn: ✅
+  cross:"",//Red emoji ID örn: ❎
   afk:"no",//Elleme
   afksayı:"0",//Elleme
-  afksebep:"",//Elleme
+  afksebep:""//Elleme
+  booster:"",//Booster rol ID
+  vip:""//Vip rol ID
+})
+
+//Kayıt
+bot.variables({
   kayıtsız:"",//Kayıtsız rolü ID
   erkek:"",//Erkek rolü ID
   kız:"",//Kız rolü ID
@@ -39,7 +49,11 @@ bot.variables({
   kke:"",//Elleme
   toplamk:"0",//Elleme
   kızk:"0",//Elleme
-  erkekk:"0",//Elleme
+  erkekk:"0"//Elleme
+})
+
+//Moderasyon
+bot.variables({
   yhrol:"",//Yeni hesap rolü ID
   yhlog:"",//Yeni hesap logu ID
   cezalog:"",//Moderasyon log kanalı ID
@@ -48,25 +62,29 @@ bot.variables({
   jailhammer:"",//Jail yetkilisi rolü ID
   jailrol:"",//Jail rolü ID
   jail:"no",//Elleme
+  snipe1:"",//Elleme
+  snipe2:""//Elleme
+  snipe3:""//Elleme
+})
+
+//Diğer
+bot.variables({
   tag:"",//Tag
   tagrol:"",//Tag rolü ID
   taglog:"",//Tag log ID
   yasaklıtag:"",//Yasaklı taglar örnek: tag1;tag2;tag3
   yasaklırol:"",//Yasaklı tag rol ID
-  yasaklılog:"",//Yasaklı tag log ID
-  booster:"",//Booster rol ID
-  vip:"",//Vip rol ID
+  yasaklılog:""//Yasaklı tag log ID
+})
+
+//Button rol
+bot.variables({
   çekiliş:"",//Çekiliş katılımcısı rol ID
   etkinlik:"",//Etkinlik katılımcısı rol ID
   id:"",//Elleme
-  snipe1:"",//Elleme
-  snipe2:""//Elleme
-  snipe3:"",//Elleme
-  tick:"",//Onay emoji ID örn: ✅
-  cross:""//Red emoji ID örn: ❎
 })
 
-////////// COMMANDS \\\\\\\\\\
+//////////////////// COMMANDS \\\\\\\\\\\\\\\\\\\\
 
 //Hoşgeldin
 bot.joinCommand({
