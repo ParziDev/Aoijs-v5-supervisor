@@ -44,6 +44,7 @@ bot.variables({
   register:"",//Hoşgeldin kanalı ID
   chat:"",//Chat kanalı ID
   cinsiyet:"",//Elleme
+  isimler:"",//Elleme
   isim:"İsim",//Elleme
   yaş:"Yaş",//Elleme
   kke:"",//Elleme
@@ -62,6 +63,7 @@ bot.variables({
   jailhammer:"",//Jail yetkilisi rolü ID
   jailrol:"",//Jail rolü ID
   jail:"no",//Elleme
+  sicil:"",//Elleme
   snipe1:"",//Elleme
   snipe2:"",//Elleme
   snipe3:""//Elleme
