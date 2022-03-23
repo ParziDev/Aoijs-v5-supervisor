@@ -3,6 +3,7 @@ module.exports = {
   aliases:"k",
   description:"Üyeyi kız olarak kayıt eder",
   code:`
+  $setUserVar[isimler;$getUserVar[isimler;$message[1]]\n$message[2] | $message[3] \`(Kız)\`;$message[1]]
   $setUserVar[yaş;$message[3];$message[1]]
   $setUserVar[isim;$message[2];$message[1]]
   $setUserVar[cinsiyet;kız;$message[1]]
