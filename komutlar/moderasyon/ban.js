@@ -4,7 +4,7 @@ module.exports = [{
   code:`
   $sendDM[**$serverName** sunucusundan *$messageSlice[1]* sebebinden banlandın.;$message[1]]
   $setUserVar[sicil;$getUserVar[sicil;$message[1]]\n**[ BAN ]** \`$messageSlice[1]\` ( <@$authorID> );$message[1]]
-  $channelSendMessage[$getServerVar[cezalog];{newEmbed:{author:Bir üye banlandı:$userAvatar[$message[1]]}{field:Kullanıcı:$userTag[$message[1]] - \`($message[1])\`}{field:Sebep:$messageSlice[1]}{field:Yetkili:<@$authorID> - \`($authorID)\`}{footer:Developed by ParzivâL}{color:010307}{thumbnail:$userAvatar[$message[1]]}}]
+  $channelSendMessage[$getServerVar[cezalog];{newEmbed:{author:Bir üye banlandı!}{field:Kullanıcı:$userTag[$message[1]] - \`($message[1])\`}{field:Sebep:$messageSlice[1]}{field:Yetkili:<@$authorID> - \`($authorID)\`}{footer:Developed by ParzivâL}{color:010307}{thumbnail:$userAvatar[$message[1]]}}]
   $channelSendMessage[$channelID;{newEmbed:{author:Üye banlandı!}{description:$getServerVar[tick] \`$userTag[$message[1]]\` adlı kullanıcı **$messageSlice[1]** sebebinden banlandı.}{color:010307}{footer:Developed by ParzivâL}{thumbnail:$userAvatar[$message[1]]}}]
   $ban[$message[1];$guildID;0;$messageSlice[1]]
   $onlyIf[$messageSlice[1]!=;$getServerVar[cross] <@$authorID>, Sebep gir.]
@@ -23,7 +23,7 @@ module.exports = [{
     code:`
   $sendDM[**$serverName** sunucusundan **$messageSlice[1]** sebebinden banlandın.;$message[1]]
   $setUserVar[sicil;$getUserVar[sicil;$message[1]]\n**[ BAN ]** \`$messageSlice[1]\` ( <@$authorID> );$message[1]]
-  $channelSendMessage[$getServerVar[cezalog];{newEmbed:{description:Bir üye banlandı}{field:Kullanıcı:$userTag[$message[1]] - \`($message[1])\`}{field:Sebep:$messageSlice[1]}{field:Yetkili:<@$authorID> - \`($authorID)\`}{footer:Developed by ParzivâL}{color:010307}{thumbnail:$userAvatar[$message[1]]}}]
+  $channelSendMessage[$getServerVar[cezalog];{newEmbed:{description:Bir üye banlandı!}{field:Kullanıcı:$userTag[$message[1]] - \`($message[1])\`}{field:Sebep:$messageSlice[1]}{field:Yetkili:<@$authorID> - \`($authorID)\`}{footer:Developed by ParzivâL}{color:010307}{thumbnail:$userAvatar[$message[1]]}}]
   $channelSendMessage[$channelID;{newEmbed:{author:Üye banlandı!}{description:$getServerVar[tick] \`$userTag[$message[1]]\` adlı kullanıcı *__$messageSlice[1]__* sebebinden banlandı.}{color:010307}{footer:Developed by ParzivâL}{thumbnail:$userAvatar[$message[1]]}}]
   $ban[$message[1];$guildID;0;$messageSlice[1]]
   $onlyIf[$messageSlice[1]!=;$getServerVar[cross] <@$authorID>, Sebep gir.]
