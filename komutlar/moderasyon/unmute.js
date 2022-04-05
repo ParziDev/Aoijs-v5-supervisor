@@ -1,7 +1,7 @@
 module.exports = {
   name:"unmute",
   code:`
-  $channelSendMessage[$getServerVar[cezalog];{newEmbed:{description:Bir üyenin mutesi açıldı!}{field:Kullanıcı:$userTag[$message[1]] - \`($message[1])\`}{field:Yetkili:<@$authorID> - \`($authorID)\`}{color:010307}{footer:Developed by ParzivâL}{thumbnail:$userAvatar[$message[1]]}}]
+  $channelSendMessage[$getServerVar[cezalog];{newEmbed:{author:Bir üyenin mutesi açıldı!}{field:Kullanıcı:$userTag[$message[1]] - \`($message[1])\`}{field:Yetkili:<@$authorID> - \`($authorID)\`}{color:010307}{footer:Developed by ParzivâL}{thumbnail:$userAvatar[$message[1]]}}]
   $channelSendMessage[$channelID;{newEmbed:{author:Üyenin mutesi açıldı!}{description:$getServerVar[tick] \`$userTag[$message[1]]\` adlı üyenin mutesi açıldı.}{color:010307}{footer:Developed by ParzivâL}{thumbnail:$userAvatar[$message[1]]}}]
   $timeoutMember[$guildID;$message[1];0;no;Remove Timeout]
   $onlyIf[$djsEval[client.guilds.cache.get('$guildID').members.cache.get('$message[1]').isCommunicationDisabled()  ;yes]==true;$getServerVar[cross] <@$authorID>, Bu kullanıcı zaten mutelenmemiş.] 
