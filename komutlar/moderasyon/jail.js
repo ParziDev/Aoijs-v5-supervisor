@@ -3,7 +3,7 @@ module.exports = {
   aliases:["hapis","hapishane","allahkurtarsın"],
   code:`
   $sendDM[**$serverName** sunucusunda *$messageSlice[1]* sebebinden jaile atıldın.;$message[1]]
-  $setUserVar[sicil;$getUserVar[sicil;$message[1]]\n$userTag tarafından \`$messageSlice[2]\` sebebinden mutelenmiş.;$message[1]]
+  $setUserVar[sicil;$getUserVar[sicil;$message[1]]\n**[ JAİL ]** \`$messageSlice[1]\` ( <@$authorID> );$message[1]]
   $channelSendMessage[$getServerVar[cezalog];{newEmbed:{description:Bir üye jaile atıldı!}{field:Kullanıcı:$userTag[$message[1]] - \`($message[1])\`}{field:Sebep:$messageSlice[1]}{field:Yetkili:<@$authorID> - \`($authorID)\`}{color:010307}{footer:Developed by ParzivâL}{thumbnail:$userAvatar[$message[1]]}}]
   $channelSendMessage[$channelID;{newEmbed:{author:Üye jaile atıldı}{description:$getServerVar[tick] \`$userTag[$message[1]]\` adlı üye **$messageSlice[1]** sebebinden jaile atıldı.}{color:010307}{footer:Developed by ParzivâL}{thumbnail:$userAvatar[$message[1]]}}]
   $setRoles[$guildID;$message[1];$getServerVar[jailrol]]
