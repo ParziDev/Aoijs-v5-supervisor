@@ -1,7 +1,7 @@
 # Kurulum #
 <br>1-/ .env dosyasında token karşısına botunuzun tokenini giriyosunuz.
-<br>2-/ parzival.js de 26. ve 96. satırlar arasındaki kısımları doldurunuz. Tırnakların içine kanal/rol idlerini girmeniz yeterli.
-<br>3-/ botun durumunu 18. satırdan düzeltebilirsiniz.
+<br>2-/ config klasöründe ayarlar.js dosyasındaki kısımları doldurunuz. Tırnakların içine kanal/rol idlerini girmeniz yeterli.
+<br>3-/ botun durumunu config klasöründeki status.js kısmından düzeltebilirsiniz.
 # Notlar #
 <br>Komutlar yalnızca id ile çalışmaktadır.
 <br>Pek bilinmeyen bir kütüphane ile kodlanmıştır. Kendiniz kod eklemeye çalışmayın. 
