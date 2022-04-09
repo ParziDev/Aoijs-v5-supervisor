@@ -4,8 +4,13 @@ token: process.env.token,
 prefix: "$getServerVar[prefix]", 
 intents: "all" 
 }) 
+
 const loader = new aoijs.LoadCommands(bot)
 loader.load(bot.cmd,"./komutlar/") 
+
+require('./config/ayarlar.js')(bot)
+require('./config/callbacks.js')(bot),
+require('./config/status.js')(bot)
 
 //Hoşgeldin
 bot.joinCommand({
