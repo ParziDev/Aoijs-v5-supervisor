@@ -7,89 +7,6 @@ intents: "all"
 const loader = new aoijs.LoadCommands(bot)
 loader.load(bot.cmd,"./komutlar/") 
 
-//////////////////// CALLBACKS \\\\\\\\\\\\\\\\\\\\
-bot.onJoin()
-bot.onLeave()
-bot.onMessage()
-bot.onInteractionCreate()
-
-//////////////////// STATUS \\\\\\\\\\\\\\\\\\\\
-bot.status({
-  text:"ParzivâL",
-  type:"PLAYING",
-  status:"dnd",
-  time: 12
-})
-
-//////////////////// VARİABLES \\\\\\\\\\\\\\\\\\\\
-
-//Genel
-bot.variables({
-  prefix:".",//Prefix
-  tick:"",//Onay emoji ID örn: ✅
-  cross:"",//Red emoji ID örn: ❎
-  afk:"no",//Elleme
-  afksayı:"0",//Elleme
-  afksebep:"",//Elleme
-  booster:"",//Booster rol ID
-  vip:""//Vip rol ID
-})
-
-//Kayıt
-bot.variables({
-  kayıtsız:"",//Kayıtsız rolü ID
-  erkek:"",//Erkek rolü ID
-  kız:"",//Kız rolü ID
-  registerhammer:"",//Kayıt Yetkilisi rolü ID
-  register:"",//Hoşgeldin kanalı ID
-  chat:"",//Chat kanalı ID
-  cinsiyet:"",//Elleme
-  isimler:"",//Elleme
-  isim:"İsim",//Elleme
-  yaş:"Yaş",//Elleme
-  kke:"",//Elleme
-  toplamk:"0",//Elleme
-  kızk:"0",//Elleme
-  erkekk:"0"//Elleme
-})
-
-//Moderasyon
-bot.variables({
-  yhrol:"",//Yeni hesap rolü ID
-  yhlog:"",//Yeni hesap logu ID
-  cezalog:"",//Moderasyon log kanalı ID
-  banhammer:"",//Ban yetkilisi rolü ID
-  mutehammer:"",//Mute yetkilisi rolü ID
-  jailhammer:"",//Jail yetkilisi rolü ID
-  jailrol:"",//Jail rolü ID
-  jail:"no",//Elleme
-  sicil:"",//Elleme
-  snipe1:"",//Elleme
-  snipe2:"",//Elleme
-  snipe3:""//Elleme
-})
-
-//Diğer
-bot.variables({
-  tag:"",//Tag
-  tagrol:"",//Tag rolü ID
-  taglog:"",//Tag log ID
-  yasaklıtag:"",//Yasaklı taglar örnek: tag1;tag2;tag3
-  yasaklırol:"",//Yasaklı tag rol ID
-  yasaklılog:""//Yasaklı tag log ID
-})
-
-//Button rol
-bot.variables({
-  çekiliş:"",//Çekiliş katılımcısı rol ID
-  etkinlik:"",//Etkinlik katılımcısı rol ID
-  sevgilimvar:"",//Sevgilim var rol ID
-  sevgilimyok:"",//Sevgilim yok rol ID
-  bekarlıksultanlıktır:""//Sevgili yapmıyorum rol ID
-})
-
-//////////////////// COMMANDS \\\\\\\\\\\\\\\\\\\\
-
 //Hoşgeldin
 bot.joinCommand({
   channel:"$getServerVar[register]",
@@ -111,6 +28,11 @@ Seninle beraber \`$membersCount\` üyeyiz.
 Kayıt olmak için <@&$getServerVar[registerhammer]> rolündeki üyeleri bekleyin.
 
 Hesabın \`$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$creationDate[$authorID;time];and;ve];seconds;Saniye];minutes;Dakika];hours;Saat];days;Gün];months;Ay];weeks;Hafta];years;Yıl];second;Saniye];minute;Dakika];hour;Saat];month;Ay];year;Yıl];week;Hafta]\` önce kurulmuş.**
+
+$if[$getServerVar[taglıalım]==true]
+**Şuanda taglı alımdayız.**
+$else
+$endif
 
 $setUserVar[cinsiyet;kayıtsız]
 $giveRoles[$guildID;$authorID;$getServerVar[kayıtsız]]
