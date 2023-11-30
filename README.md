@@ -10,5 +10,5 @@
 <br>Mute komutunda bot timeout ( zaman aşımı ) atmaktadır.
 <br>https://www.tokyocode.xyz/discord adresinden sunucumuza katılabilir ParzivâL ile iletişime geçerek yardım alabilirsiniz.
 # ParzivâL #
-<br> Instagram: <a href="https://instagram.com/parziisgod">Tıkla</a>
+<br> Instagram: <a href="https://instagram.com/lilparzi">Tıkla</a>
 <br> YouTube: <a href="https://youtube.com/c/ParzivaL400">Tıkla</a>
